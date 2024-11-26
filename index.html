@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onkar Kolekar | Tech Innovator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .neon-border {
+            border: 2px solid transparent;
+            border-image: linear-gradient(to right, #00c6ff, #0072ff);
+            border-image-slice: 1;
+        }
+        .skill-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .skill-icon:hover {
+            transform: scale(1.2);
+            color: #0072ff;
+        }
+        .project-card {
+            perspective: 1000px;
+            transition: transform 0.6s;
+        }
+        .project-card:hover {
+            transform: rotateY(10deg);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50 px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">
+                <i class="fas fa-code mr-2"></i>Onkar Kolekar
+            </div>
+            <div class="space-x-6">
+                <a href="#home" class="hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-home mr-1"></i>Home
+                </a>
+                <a href="#about" class="hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-user mr-1"></i>About
+                </a>
+                <a href="#projects" class="hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-project-diagram mr-1"></i>Projects
+                </a>
+                <a href="#skills" class="hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-tools mr-1"></i>Skills
+                </a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-envelope mr-1"></i>Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex items-center bg-gradient-to-r from-blue-500 to-purple-600 pt-16">
+        <div class="container mx-auto px-4 text-center text-white">
+            <div class="space-y-4">
+                <h1 class="text-5xl font-bold mb-4 animate-pulse gradient-text">
+                    <i class="fas fa-laptop-code mr-3"></i>Onkar Kolekar
+                </h1>
+                <p class="text-2xl mb-6 animate-bounce">
+                    AI/ML Engineer | Full Stack Developer
+                </p>
+                <div class="space-x-4">
+                    <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full hover:bg-blue-100 transition">
+                        <i class="fas fa-paper-plane mr-2"></i>Hire Me
+                    </a>
+                    <a href="#projects" class="border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition">
+                        <i class="fas fa-eye mr-2"></i>View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+                <i class="fas fa-user-graduate mr-3"></i>About Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="neon-border p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>Academic Journey
+                    </h3>
+                    <p class="mb-4">
+                        Computer Science & AI/ML enthusiast with a passion for solving real-world problems through innovative technology. Currently pursuing B.Tech at VIT Pune with a stellar CGPA of 8.33/10.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-award text-blue-600 mb-2 text-2xl"></i>
+                            <h4 class="font-bold">Achievements</h4>
+                            <ul>
+                                <li>Smart India Hackathon Winner</li>
+                                <li>Innovation Expo Finalist</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-certificate text-blue-600 mb-2 text-2xl"></i>
+                            <h4 class="font-bold">Education</h4>
+                            <p>B.Tech CSE (AIML)</p>
+                            <p>VIT, Pune</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-64 h-64 bg-blue-100 rounded-full overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="C:\Users\sumit\Downloads\WhatsApp Image 2024-11-26 at 20.22.57_7cd034ed.jpg" alt="Onkar Kolekar" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+                <i class="fas fa-wrench mr-3"></i>Technical Skills
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                        <i class="fas fa-code mr-2"></i>Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="skill-icon text-center">
+                            <i class="fab fa-python text-4xl text-blue-500"></i>
+                            <p class="text-sm mt-2">Python</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fab fa-java text-4xl text-red-500"></i>
+                            <p class="text-sm mt-2">Java</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fab fa-js text-4xl text-yellow-500"></i>
+                            <p class="text-sm mt-2">JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                        <i class="fas fa-laptop-code mr-2"></i>Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="skill-icon text-center">
+                            <i class="fab fa-react text-4xl text-blue-400"></i>
+                            <p class="text-sm mt-2">React</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fas fa-cogs text-4xl text-gray-500"></i>
+                            <p class="text-sm mt-2">TensorFlow</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fas fa-mobile-alt text-4xl text-green-500"></i>
+                            <p class="text-sm mt-2">Flutter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">
+                        <i class="fas fa-database mr-2"></i>Tools & Databases
+                    </h3>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="skill-icon text-center">
+                            <i class="fab fa-git-alt text-4xl text-orange-500"></i>
+                            <p class="text-sm mt-2">Git</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fas fa-database text-4xl text-blue-700"></i>
+                            <p class="text-sm mt-2">MySQL</p>
+                        </div>
+                        <div class="skill-icon text-center">
+                            <i class="fas fa-server text-4xl text-green-600"></i>
+                            <p class="text-sm mt-2">MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
+                <i class="fas fa-project-diagram mr-3"></i>Featured Projects
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-brain text-4xl text-blue-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold">BrailleEcho</h3>
+                    </div>
+                    <p class="text-center mb-4">AI-powered Braille recognition system with 93% accuracy</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Machine Learning</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-chart-line text-4xl text-green-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold">StockVision</h3>
+                    </div>
+                    <p class="text-center mb-4">Interactive stock dashboard with real-time forecasting</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">React.js</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">API</span>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shield-alt text-4xl text-red-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold">PaySecure</h3>
+                    </div>
+                    <p class="text-center mb-4">Fraud detection system with 98.4% accuracy</p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Machine Learning</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">
+                <i class="fas fa-paper-plane mr-3"></i>Get In Touch
+            </h2>
+            <p class="text-xl mb-8">Let's collaborate and create something amazing!</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:onkar.kolekr23@vit.edu" class="text-4xl hover:text-blue-200 transition">
+                    <i class="fas fa-envelope-open-text"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-4xl hover:text-blue-200 transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="text-4xl hover:text-blue-200 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div>
+                <p class="text-lg">
+                    <i class="fas fa-envelope mr-2"></i>onkar.kolekr23@vit.edu
+                </p>
+                (... previous code remains the same, and I'll add the following to complete it)
+
+                <p class="text-lg">
+                    <i class="fas fa-phone mr-2"></i>+91 8847785339
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com" target="_blank" class="text-2xl hover:text-blue-400 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-2xl hover:text-blue-400 transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:onkar.kolekr23@vit.edu" class="text-2xl hover:text-blue-400 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Onkar Kolekar. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed with <i class="fas fa-heart text-red-500"></i> and Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP ScrollTrigger Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Fade In Animations for Sections
+        gsap.utils.toArray('section').forEach(section => {
+            gsap.fromTo(section, 
+                { opacity: 0, y: 50 }, 
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 1, 
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Typing Effect for Home Section
+        const typedTextSpan = document.querySelector('.typing-text');
+        const descriptions = [
+            "AI/ML Engineer",
+            "Full Stack Developer", 
+            "Tech Innovator"
+        ];
+        let descIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentDesc = descriptions[descIndex];
+            const typedText = isDeleting 
+                ? currentDesc.substring(0, charIndex - 1) 
+                : currentDesc.substring(0, charIndex + 1);
+
+            // Update text (if you have a typing text element)
+            if (typedTextSpan) {
+                typedTextSpan.textContent = typedText;
+            }
+
+            charIndex += isDeleting ? -1 : 1;
+
+            if (!isDeleting && charIndex === currentDesc.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                descIndex = (descIndex + 1) % descriptions.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+
+        // Uncomment and modify if you add a typing text element
+        // type();
+
+        // Background Particle Effect (Optional)
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.style.position = 'fixed';
+            particlesContainer.style.top = '0';
+            particlesContainer.style.left = '0';
+            particlesContainer.style.width = '100%';
+            particlesContainer.style.height = '100%';
+            particlesContainer.style.pointerEvents = 'none';
+            particlesContainer.style.zIndex = '-1';
+            document.body.appendChild(particlesContainer);
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '5px';
+                particle.style.height = '5px';
+                particle.style.background = 'rgba(0, 123, 255, 0.5)';
+                particle.style.borderRadius = '50%';
+                
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                particle.style.animation = `float ${5 + Math.random() * 10}s infinite ease-in-out`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Create background particles
+        createParticles();
+
+        // Add keyframe animation for floating particles
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
